@@ -1,6 +1,6 @@
 const PRODUCTS=[
-{name:"Prada Figure Tee",price:350,image:"assets/product-prada.jpg",tag:"Best Seller"},
-{name:"AMIRI Drip Tee",price:350,image:"assets/product-amiri.jpg",tag:"New"}
+{name:"Prada Figure Tee",price:400,image:"assets/product-prada.jpg",tag:"Best Seller"},
+{name:"BALMIN Drip Tee",price:400,image:"assets/product-BALMIN.jpg",tag:"New"}
 ];
 
 let cart=0,wishlist=new Set();
