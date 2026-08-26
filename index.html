@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>COLOMBIA STORE</title>
+<meta name="description" content="COLOMBIA STORE — Premium Imported Men's Clothing">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="iconBtn" id="menuBtn" aria-label="Menu">☰</button>
+  <a class="logoLink" href="#home">
+    <img src="assets/colombia-logo.png" alt="COLOMBIA STORE">
+    <span>COLOMBIA<small>STORE</small></span>
+  </a>
+  <div class="topActions">
+    <button class="iconBtn" id="searchBtn" aria-label="Search">⌕</button>
+    <button class="iconBtn" id="wishBtn" aria-label="Wishlist">♡</button>
+    <button class="iconBtn cartBtn" id="cartBtn" aria-label="Cart">♧<b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<div id="searchBar"><input id="searchInput" type="search" placeholder="Search products..."></div>
+<div id="overlay"></div>
+
+<aside id="drawer">
+  <div class="drawerTitle"><strong>MENU</strong><button id="closeMenu">×</button></div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#new">New Collection</a>
+    <a href="#summer">Summer Collection</a>
+    <a href="#classic">Classic Collection</a>
+    <a href="#bestsellers">Best Sellers</a>
+    <a href="#limited">Limited Edition</a>
+    <a href="#track">Track Order</a>
+  </nav>
+</aside>
+
+<main id="home">
+
+<section class="hero">
+  <img src="assets/hero.jpg" alt="COLOMBIA STORE New Collection">
+  <a class="heroButton" href="#bestsellers">SHOP NOW <span>→</span></a>
+  <div class="dots"><b></b><i></i><i></i><i></i><i></i></div>
+</section>
+
+<section class="section collectionsSection">
+  <div class="sectionHead">
+    <h2>SHOP BY COLLECTION</h2>
+    <a href="#bestsellers">View All →</a>
+  </div>
+
+  <div class="collections">
+    <a class="collectionCard" href="#new">
+      <img src="assets/collection-new.jpg" alt="New Collection">
+    </a>
+    <a class="collectionCard" href="#summer">
+      <img src="assets/collection-summer.jpg" alt="Summer Collection">
+    </a>
+    <a class="collectionCard" href="#classic">
+      <img src="assets/collection-classic.jpg" alt="Classic Collection">
+    </a>
+    <a class="collectionCard" href="#bestsellers">
+      <img src="assets/collection-best.jpg" alt="Best Sellers">
+    </a>
+    <a class="collectionCard" href="#limited">
+      <img src="assets/collection-limited.jpg" alt="Limited Edition">
+    </a>
+  </div>
+</section>
+
+<section class="section categorySection" id="new">
+  <div class="sectionHead"><h2>NEW COLLECTION</h2></div>
+  <div class="productGrid" id="newProducts"></div>
+</section>
+
+<section class="section categorySection" id="summer">
+  <div class="sectionHead"><h2>SUMMER COLLECTION</h2></div>
+  <div class="productGrid" id="summerProducts"></div>
+</section>
+
+<section class="section categorySection" id="classic">
+  <div class="sectionHead"><h2>CLASSIC COLLECTION</h2></div>
+  <div class="productGrid" id="classicProducts"></div>
+</section>
+
+<section class="section categorySection" id="bestsellers">
+  <div class="sectionHead"><h2>BEST SELLERS 🔥</h2></div>
+  <div class="productGrid" id="bestProducts"></div>
+</section>
+
+<section class="section categorySection" id="limited">
+  <div class="sectionHead"><h2>LIMITED EDITION</h2></div>
+  <div class="productGrid" id="limitedProducts"></div>
+</section>
+
+<section class="benefits">
+  <div><span>🚚</span><strong>FAST DELIVERY</strong><small>Across Egypt</small></div>
+  <div><span>📦</span><strong>TRACK ORDER</strong><small>Live Updates</small></div>
+  <div><span>🛡️</span><strong>SECURE PAYMENT</strong><small>Cash / Vodafone Cash</small></div>
+  <div><span>⭐</span><strong>CUSTOMER REVIEWS</strong><small>Real Feedback</small></div>
+</section>
+
+<section class="trackBox" id="track">
+  <small>ORDER STATUS</small>
+  <h2>TRACK YOUR ORDER</h2>
+  <div class="trackRow">
+    <input id="orderInput" placeholder="Order number">
+    <button id="trackButton">TRACK</button>
+  </div>
+  <p id="trackMessage"></p>
+</section>
+</main>
+
+<nav class="bottomNav">
+  <a href="#home"><span>⌂</span><small>Home</small></a>
+  <a href="#new"><span>▦</span><small>Categories</small></a>
+  <a class="bottomLogo" href="#home"><img src="assets/colombia-logo.png" alt="Logo"></a>
+  <a href="#track"><span>□</span><small>Orders</small></a>
+  <button id="accountButton"><span>●</span><small>Account</small></button>
+</nav>
+
+<div id="productModal" aria-hidden="true">
+  <div class="modalCard">
+    <button id="modalClose" class="modalClose">×</button>
+    <div class="gallery">
+      <img id="modalImg" alt="">
+      <button class="galleryArrow prev" id="prevImg">‹</button>
+      <button class="galleryArrow next" id="nextImg">›</button>
+      <div id="thumbs" class="thumbs"></div>
+    </div>
+    <div class="modalInfo">
+      <span id="modalTag" class="tag"></span>
+      <h2 id="modalTitle"></h2>
+      <strong id="modalPrice"></strong>
+      <p>Premium imported wear.</p>
+      <div class="sizePicker">
+        <button data-size="M">M</button>
+        <button data-size="L">L</button>
+        <button data-size="XL">XL</button>
+        <button data-size="XXL">XXL</button>
+      </div>
+      <button class="buyButton" id="modalBuy">🛍 BUY NOW</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
