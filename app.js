@@ -1062,7 +1062,7 @@ EGP ${total}`;
       subtotal,
       shipping,
       total,
-      status:"Pending"
+      status:"In preparation"
     })
   );
 
